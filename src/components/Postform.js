@@ -32,12 +32,9 @@ class Postform extends Component {
                 headers: {
                     'content-type': 'application/json'
                 },
-                body: JSON.stringify(post)
+                data: post
             }
-        ).then((res) => {
-      
-            return (res.data)
-        })
+        ).then((res) => (res.data))
         .then((data) => {
             console.log(data)
         })
